@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ProductoNumeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int numero = 0;
+        int producto = 1;
+        int contador = 0;
+
+        System.out.print("Introduce un número entero positivo: ");
+        numero = sc.nextInt();
+
+        while(numero > 0){
+            producto *= numero;
+            contador++;
+            System.out.print("Introduce otro número entero positivo (o 0 para terminar): ");
+            numero = sc.nextInt();
+        }
+
+        if(contador == 0){
+            System.out.println("No se ha introducido ningún número.");
+        } else {
+            System.out.println("El producto de los " + contador + " números introducidos es " + producto + ".");
+        }
+    }
+}
